@@ -18,8 +18,12 @@
     const anchor = document.querySelector(`[data-social="${platform}"]`);
     const url = String(config[platform] || '').trim();
     if (anchor && /^https:\/\//i.test(url)) {
-      anchor.setAttribute('href', url);
-      anchor.hidden = false;
+      const link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = platform === 'instagram' ? 'Instagram' : 'Facebook';
+      anchor.replaceWith(link);
     }
   });
   const email = String(config.email || '').trim();
