@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
   <rect width="1200" height="630" fill="#101311" />
-  <path d="M27 315 130 27h27l104 288M72 198h143M179 315 282 27h27l86 288M225 198h123" transform="translate(910 180) scale(.68)" fill="none" stroke="#92A796" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter" opacity=".72" />
+  <path d="M5 61 21 7 37 61M12 40h18M36 61 52 7 68 61M43 40h18" transform="translate(930 190) scale(3)" fill="none" stroke="#92A796" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" opacity=".72" />
   <text x="88" y="114" fill="#92A796" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4">ALESSANDRO ARENAS</text>
   <text x="83" y="296" fill="#F3F0E9" font-family="Georgia,serif" font-size="77">Tecnología con criterio.</text>
   <text x="83" y="387" fill="#92A796" font-family="Georgia,serif" font-size="77" font-style="italic">Hecha para tu negocio.</text>

@@ -63,4 +63,39 @@
     window.open(url, '_blank', 'noopener,noreferrer');
     feedback.textContent = 'Revisa el mensaje en WhatsApp y presiona Enviar para completar tu consulta. Si no se abrió, permite las ventanas emergentes y vuelve a intentarlo.';
   });
+
+  // Progressive enhancement: everything is visible before motion is applied.
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const activeAnimations = new Set();
+  const animate = (element, frames, options) => {
+    if (motionPreference.matches || typeof element.animate !== 'function') return;
+    const animation = element.animate(frames, options);
+    activeAnimations.add(animation);
+    animation.finished.then(() => activeAnimations.delete(animation)).catch(() => activeAnimations.delete(animation));
+  };
+  motionPreference.addEventListener?.('change', event => {
+    if (event.matches) activeAnimations.forEach(animation => animation.cancel());
+  });
+  document.querySelectorAll('.hero-line').forEach((line, index) => {
+    animate(line, [{ transform: 'translateY(12px)' }, { transform: 'translateY(0)' }],
+      { duration: 650, delay: index * 100, easing: 'cubic-bezier(.22,1,.36,1)' });
+  });
+  document.querySelectorAll('.flow-step').forEach((step, index) => {
+    animate(step, [{ opacity: .7, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 600, delay: 450 + index * 430, easing: 'cubic-bezier(.22,1,.36,1)' });
+    const marker = step.querySelector('.flow-marker');
+    if (marker) animate(marker, [{ transform: 'scale(.75)', backgroundColor: '#101311' }, { transform: 'scale(1)', backgroundColor: '#92a796' }, { transform: 'scale(1)', backgroundColor: '#101311' }],
+      { duration: 700, delay: 450 + index * 430, easing: 'ease-out' });
+  });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        animate(entry.target, [{ opacity: .88, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }],
+          { duration: 650, easing: 'cubic-bezier(.22,1,.36,1)' });
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.section-top, .service-row, .approach-grid, .portfolio-heading, .case-primary, .case-secondary, .process-list article, .faq-grid, .contact-grid').forEach(element => observer.observe(element));
+  }
 })();

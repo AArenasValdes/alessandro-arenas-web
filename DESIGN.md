@@ -52,10 +52,10 @@ The approved palette moves between warm reading surfaces and charcoal sections, 
 - **Deep green** (`#4A5B51`): the approach section, emphasis and links on light surfaces.
 
 ### Secondary
-- **Charcoal** (`#101311`): header, hero, portfolio, contact, and footer surfaces; primary text on ivory.
+- **Charcoal** (`#101311`): header, hero, contact, and footer surfaces; primary text on ivory.
 
 ### Tertiary
-- **Ivory** (`#F3F0E9`): main reading surfaces and the contact form surface.
+- **Ivory** (`#F3F0E9`): main reading surfaces, portfolio and contact form surface.
 
 ### Neutral
 - **Warm gray** (`#A6A9A3`): secondary copy and metadata on dark surfaces.
@@ -84,7 +84,7 @@ The centered content shell is capped at 1160px with 32px desktop gutters, 24px b
 
 ## Elevation & Depth
 
-The visual system is flat: it uses no box-shadow vocabulary. Depth comes from tonal surface changes, thin rules, spacing, and the outlined AA artwork rather than elevated cards.
+The visual system is flat: it uses no box-shadow vocabulary. Depth comes from tonal surface changes, thin rules, spacing, and restrained motion rather than elevated cards.
 
 ## Shapes
 
@@ -93,7 +93,7 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 ## Components
 
 ### Brand and navigation
-- The primary wordmark reads “Alessandro Arenas”; the original AA SVG line mark is a supporting symbol in the header, hero, and footer.
+- The primary wordmark reads “Alessandro Arenas”; the refined AA SVG line mark supports it in the header and footer.
 - Desktop navigation is inline. Below 760px it is toggled open/closed, updates its accessible label and `aria-expanded` state, and closes when a link is selected.
 - A skip-to-content link is the first keyboard stop.
 
@@ -103,7 +103,9 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 
 ### Services and portfolio
 - Services use four numbered, ruled rows with a title, factual description, and concise scope metadata.
-- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; ICT Zella follows as the secondary case. Use text descriptions and links only, with no fabricated interface imagery or results.
+- The hero shows a labelled conceptual sequence: consultation, organized information and next action. It is not an interface or a claim about either product.
+- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; ICT Zella follows as the secondary case. Original typographic compositions reserve proportional space for authorized screenshots without fabricating interfaces or results.
+- The heading and conceptual sequence animate once. IntersectionObserver adds subtle one-time section motion; content remains visible if JavaScript or the observer is unavailable. Reduced motion cancels animation and transitions.
 
 ### Forms
 - Controls use ivory/light surfaces, thin borders, visible labels, and native validation affordances.
@@ -119,5 +121,5 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 - Don't invent customer claims, testimonials, metrics, screenshots, or credentials.
 - Don't change the site from its static HTML/CSS/JavaScript architecture as part of design work.
 
-**Evidence note:** This documentation was checked against `sitio/index.html`, `sitio/styles.css`, `sitio/script.js`, and `sitio/assets/fonts/README.md`. Local review captures are present under `.impeccable/review/` at desktop, 768px, 390px, and 319px widths; this pass documented the source and capture inventory without making new visual or interaction claims.
+**Evidence note:** Local review captures in `.impeccable/review/` cover 319, 390, 768, and 1440px; a silent recording shows the hero sequence and the portfolio. No product screenshots are included. The WhatsApp number remains owner-configured and empty.
 
