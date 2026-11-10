@@ -80,13 +80,164 @@
     animate(line, [{ transform: 'translateY(12px)' }, { transform: 'translateY(0)' }],
       { duration: 650, delay: index * 100, easing: 'cubic-bezier(.22,1,.36,1)' });
   });
-  document.querySelectorAll('.flow-step').forEach((step, index) => {
-    animate(step, [{ opacity: .7, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }],
-      { duration: 600, delay: 450 + index * 430, easing: 'cubic-bezier(.22,1,.36,1)' });
-    const marker = step.querySelector('.flow-marker');
-    if (marker) animate(marker, [{ transform: 'scale(.75)', backgroundColor: '#101311' }, { transform: 'scale(1)', backgroundColor: '#92a796' }, { transform: 'scale(1)', backgroundColor: '#101311' }],
-      { duration: 700, delay: 450 + index * 430, easing: 'ease-out' });
-  });
+  const demo = document.querySelector('.visual-demo');
+  if (demo) {
+    const stage = demo.querySelector('.demo-stage');
+    const artwork = demo.querySelector('.concept-art');
+    const toggle = demo.querySelector('.demo-toggle');
+    const caption = demo.querySelector('figcaption');
+    const conceptCaption = caption.textContent;
+    const connection = navigator.connection;
+    const mobile = window.matchMedia('(max-width: 760px)');
+    const localUrl = value => {
+      if (!value) return '';
+      try {
+        const url = new URL(value, document.baseURI);
+        return url.origin === location.origin && /^https?:$/.test(url.protocol) ? url.href : '';
+      } catch { return ''; }
+    };
+    const mp4 = localUrl(demo.dataset.videoMp4);
+    const webm = localUrl(demo.dataset.videoWebm);
+    const posterUrl = localUrl(demo.dataset.videoPoster);
+    const hasVideo = Boolean(mp4 && posterUrl);
+    const mediaCaption = String(demo.dataset.videoLabel || '').trim() || 'Grabación del software';
+    const staticOnly = () => motionPreference.matches || Boolean(connection?.saveData) ||
+      (mobile.matches && ['slow-2g', '2g', '3g'].includes(connection?.effectiveType));
+    let inView = false;
+    let userPaused = false;
+    let videoFailed = false;
+    let video;
+    let poster;
+
+    const showConcept = () => {
+      if (video) { video.pause(); video.hidden = true; }
+      if (poster) poster.hidden = true;
+      artwork.hidden = false;
+      caption.textContent = conceptCaption;
+      demo.classList.toggle('is-animated', !staticOnly() && inView);
+      demo.classList.toggle('is-paused', userPaused);
+      toggle.hidden = staticOnly();
+      toggle.textContent = userPaused ? 'Reanudar animación' : 'Pausar animación';
+    };
+    const ensurePoster = () => {
+      if (poster || !hasVideo || videoFailed) return;
+      poster = document.createElement('img');
+      poster.className = 'demo-video-poster';
+      poster.alt = '';
+      poster.loading = 'lazy';
+      poster.hidden = false;
+      poster.addEventListener('load', () => {
+        if (!videoFailed && (staticOnly() || !video || video.paused)) {
+          artwork.hidden = true; poster.hidden = false; poster.classList.add('is-ready'); caption.textContent = mediaCaption;
+        }
+      });
+      poster.addEventListener('error', () => { videoFailed = true; showConcept(); });
+      poster.src = posterUrl;
+      stage.append(poster);
+    };
+    const showPoster = () => {
+      ensurePoster();
+      if (poster) poster.hidden = false;
+      if (poster?.complete && poster.naturalWidth) {
+        artwork.hidden = true; poster.classList.add('is-ready'); caption.textContent = mediaCaption;
+      }
+    };
+    const failVideo = () => { videoFailed = true; showConcept(); };
+    const ensureVideo = () => {
+      if (video || videoFailed || !hasVideo) return;
+      video = document.createElement('video');
+      video.className = 'demo-video';
+      video.muted = true;
+      video.defaultMuted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.autoplay = true;
+      video.preload = 'none';
+      video.poster = posterUrl;
+      video.setAttribute('aria-label', mediaCaption);
+      video.hidden = false;
+      const sources = [[webm, 'video/webm'], [mp4, 'video/mp4']].filter(([url]) => url);
+      let failedSources = 0;
+      sources.forEach(([url, type]) => {
+        const source = document.createElement('source');
+        source.src = url; source.type = type;
+        source.addEventListener('error', () => { if (++failedSources === sources.length) failVideo(); });
+        video.append(source);
+      });
+      video.addEventListener('playing', () => {
+        if (videoFailed || staticOnly() || !inView || userPaused) { video.pause(); return; }
+        demo.classList.remove('is-animated');
+        artwork.hidden = true;
+        if (poster) poster.hidden = true;
+        video.hidden = false;
+        video.classList.add('is-playing');
+        caption.textContent = mediaCaption;
+        toggle.hidden = false;
+        toggle.textContent = 'Pausar video';
+      });
+      video.addEventListener('error', failVideo);
+      stage.append(video);
+    };
+    const refreshDemo = () => {
+      if (staticOnly()) {
+        demo.classList.remove('is-animated', 'is-paused');
+        if (video) { video.pause(); video.hidden = true; video.classList.remove('is-playing'); }
+        artwork.hidden = false;
+        toggle.hidden = true;
+        if (hasVideo && !videoFailed) showPoster();
+        else { artwork.hidden = false; caption.textContent = conceptCaption; }
+        return;
+      }
+      if (!hasVideo || videoFailed) { showConcept(); return; }
+      if (!inView) { if (video) video.pause(); demo.classList.remove('is-animated'); toggle.hidden = false; toggle.textContent = 'Reproducir video'; return; }
+      ensurePoster();
+      showPoster();
+      ensureVideo();
+      video.hidden = false;
+      toggle.hidden = false;
+      if (userPaused) { toggle.textContent = 'Reproducir video'; return; }
+      video.play().catch(() => { if (!videoFailed && video.paused) { showPoster(); toggle.textContent = 'Reproducir video'; } });
+    };
+    toggle.addEventListener('click', () => {
+      if (hasVideo && !video && !videoFailed) {
+        userPaused = false;
+        inView = true;
+        refreshDemo();
+      } else if (video && !videoFailed) {
+        if (video.paused) { userPaused = false; video.play().catch(() => { if (!videoFailed) toggle.textContent = 'Reproducir video'; }); }
+        else { userPaused = true; video.pause(); toggle.textContent = 'Reanudar video'; }
+      } else {
+        userPaused = !userPaused;
+        demo.classList.toggle('is-paused', userPaused);
+        toggle.textContent = userPaused ? 'Reanudar animación' : 'Pausar animación';
+      }
+    });
+    motionPreference.addEventListener?.('change', refreshDemo);
+    mobile.addEventListener?.('change', refreshDemo);
+    connection?.addEventListener?.('change', refreshDemo);
+    if ('IntersectionObserver' in window) {
+      const demoObserver = new IntersectionObserver(entries => {
+        inView = entries[0].isIntersecting;
+        refreshDemo();
+      }, { threshold: .1 });
+      demoObserver.observe(stage);
+    } else {
+      let scheduled = false;
+      const checkVisibility = () => {
+        scheduled = false;
+        const rect = stage.getBoundingClientRect();
+        const visible = rect.bottom > 0 && rect.top < innerHeight && rect.right > 0 && rect.left < innerWidth;
+        if (visible !== inView) { inView = visible; refreshDemo(); }
+      };
+      const scheduleVisibilityCheck = () => {
+        if (!scheduled) { scheduled = true; requestAnimationFrame(checkVisibility); }
+      };
+      window.addEventListener('scroll', scheduleVisibilityCheck, { passive: true });
+      window.addEventListener('resize', scheduleVisibilityCheck, { passive: true });
+      checkVisibility();
+    }
+    refreshDemo();
+  }
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {

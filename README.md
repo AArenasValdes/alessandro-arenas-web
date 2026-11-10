@@ -8,6 +8,7 @@ Repositorio para trabajo con Codex, Claude Code y Antigravity. Sin backend, sin 
 - `guias/`: estrategia de marketing e identidad.
 - `docs/BRIEF_DISENO.md`: diseño, conversión y objetivos.
 - `docs/PUBLICACION_CLOUDFLARE.md`: cómo desplegar por $0 en hosting.
+- `docs/DEMO_VISUAL.md`: cómo incorporar una grabación y poster autorizados al hero.
 - `docs/PROMPT_PARA_CODEX.md`: encargo listo para el agente.
 - `AGENTS.md`: reglas compartidas para Codex y Antigravity.
 - `CLAUDE.md`: adaptador para Claude Code.

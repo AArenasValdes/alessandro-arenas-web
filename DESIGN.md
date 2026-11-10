@@ -103,9 +103,9 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 
 ### Services and portfolio
 - Services use four numbered, ruled rows with a title, factual description, and concise scope metadata.
-- The hero shows a labelled conceptual sequence: consultation, organized information and next action. It is not an interface or a claim about either product.
-- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; ICT Zella follows as the secondary case. Original typographic compositions reserve proportional space for authorized screenshots without fabricating interfaces or results.
-- The heading and conceptual sequence animate once. IntersectionObserver adds subtle one-time section motion; content remains visible if JavaScript or the observer is unavailable. Reduced motion cancels animation and transitions.
+- The hero uses a labelled, original vector illustration to show a request becoming organized information and an action. It is conceptual, not an interface or a claim about either product.
+- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; ICT Zella follows as the secondary case. Original editorial posters reserve proportional space for authorized screenshots without fabricating interfaces or results.
+- The conceptual illustration runs an eight-second loop with a pause control. The heading and scroll reveals remain visible by default; reduced motion or data saving shows a static illustration. Optional same-origin video is loaded only when configured and visible; see `docs/DEMO_VISUAL.md`.
 
 ### Forms
 - Controls use ivory/light surfaces, thin borders, visible labels, and native validation affordances.
@@ -121,5 +121,5 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 - Don't invent customer claims, testimonials, metrics, screenshots, or credentials.
 - Don't change the site from its static HTML/CSS/JavaScript architecture as part of design work.
 
-**Evidence note:** Local review captures in `.impeccable/review/` cover 319, 390, 768, and 1440px; a silent recording shows the hero sequence and the portfolio. No product screenshots are included. The WhatsApp number remains owner-configured and empty.
+**Evidence note:** Local review captures outside the repository cover 319, 390, 768, and 1440px; a silent recording shows the conceptual hero. No product screenshots are included. The WhatsApp number remains owner-configured and empty.
 

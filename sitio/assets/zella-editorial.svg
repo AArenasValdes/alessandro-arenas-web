@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-label="Composición abstracta de páginas para ICT Zella">
+  <rect width="960" height="480" fill="#4a5b51"/>
+  <path d="M238 113c90-30 166-20 242 25v236c-76-45-152-55-242-25zM722 113c-90-30-166-20-242 25v236c76-45 152-55 242-25z" fill="#f3f0e9" fill-opacity=".1" stroke="#d9e1d6" stroke-width="2"/>
+  <path d="M480 138v236M283 178c55-11 98-5 143 13M283 209c55-11 98-5 143 13M534 191c45-18 88-24 143-13M534 222c45-18 88-24 143-13" fill="none" stroke="#d9e1d6" stroke-opacity=".7" stroke-width="2"/>
+  <text x="54" y="69" fill="#e2e8df" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">ICT ZELLA</text>
+  <text x="54" y="437" fill="#e2e8df" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">REGISTRAR · REVISAR</text>
+</svg>

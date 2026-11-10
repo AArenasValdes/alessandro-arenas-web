@@ -35,7 +35,7 @@
   "portfolio": {
     "primaryCase": "Ventora",
     "secondaryCase": "ICT Zella",
-    "presentation": "Ivory editorial cases with original typographic compositions, factual descriptions and links; spaces can accept authorized product captures"
+    "presentation": "Ivory editorial cases with original vector posters, factual descriptions and links; spaces can accept authorized product captures"
   },
   "layout": {
     "shellMaxWidth": "1160px",
@@ -58,13 +58,13 @@
     "focusVisible": "Visible outline on keyboard focus",
     "mobileNavigation": "Button label and aria-expanded reflect open state; selecting a link closes it",
     "reducedMotion": "Disable scroll, animation, and transition motion when prefers-reduced-motion is enabled",
-    "progressiveMotion": "Visible content by default; one-time hero sequence and IntersectionObserver reveals; no required JavaScript for reading"
+    "progressiveMotion": "Visible content by default; pausable conceptual illustration and one-time IntersectionObserver reveals; static with reduced motion or data saving; optional same-origin video loads when visible"
   },
   "evidence": {
     "sourceFiles": ["sitio/index.html", "sitio/styles.css", "sitio/script.js", "sitio/assets/fonts/README.md"],
-    "reviewCaptureDirectory": ".impeccable/review/",
+    "reviewCaptureDirectory": "Local temporary review artifacts outside the repository",
     "captureWidthsExplicitInNames": [319, 390, 768, 1440],
-    "note": "Local Edge screenshots and a silent motion recording document the editorial flow and portfolio."
+    "note": "Local Edge screenshots and a silent motion recording document the conceptual hero and editorial portfolio."
   }
 }
 

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" role="img" aria-label="Una solicitud se ordena y se convierte en una acción; ilustración conceptual">
+  <rect width="720" height="520" fill="#1d2821"/>
+  <path d="M54 397H666M54 124H666" stroke="#92a796" stroke-opacity=".3"/>
+  <path d="M112 260H230M492 260H604" fill="none" stroke="#92a796" stroke-width="2" stroke-dasharray="5 8"/>
+  <g fill="#92a796"><circle cx="112" cy="260" r="5"/><circle cx="604" cy="260" r="5"/></g>
+  <g transform="translate(80 182) rotate(-8 48 42)" fill="#c7d1c4"><rect width="92" height="76" rx="2"/><path d="M20 25h52M20 39h38M20 53h45" stroke="#4a5b51" stroke-width="3"/></g>
+  <path d="M257 125h211v269H257z" fill="#63796a"/>
+  <path d="M245 116h211v269H245z" fill="#a8baaa"/>
+  <path d="M233 106h211v269H233z" fill="#f3f0e9"/>
+  <path d="M267 158h97M267 182h143M267 207h118M267 261h143M267 282h126M267 303h135" stroke="#4a5b51" stroke-width="4" stroke-linecap="round" opacity=".7"/>
+  <circle cx="529" cy="260" r="48" fill="#92a796"/>
+  <path d="m508 259 14 14 29-33" fill="none" stroke="#101311" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="54" y="458" fill="#c9d2c8" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">DE LA SOLICITUD A LA ACCIÓN</text>
+</svg>
