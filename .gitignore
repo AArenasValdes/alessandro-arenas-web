@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+.env
+.env.*
+!.env.example
+node_modules/
+.cache/
+dist/
+coverage/
+.playwright/
+playwright-report/
+test-results/
+.claude/settings.local.json
+.claude.local.md
+*.log
