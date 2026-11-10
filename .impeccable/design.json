@@ -1,0 +1,69 @@
+{
+  "direction": "Atelier Nocturno: tecnología editorial de autor",
+  "palette": {
+    "charcoal": "#101311",
+    "ivory": "#F3F0E9",
+    "sage": "#92A796",
+    "deepGreen": "#4A5B51",
+    "warmGray": "#A6A9A3"
+  },
+  "typography": {
+    "display": {
+      "family": "Instrument Serif",
+      "fallback": "Georgia, serif",
+      "weights": [400],
+      "styles": ["normal", "italic"],
+      "use": "Editorial headings, italic emphasis, and large product names"
+    },
+    "body": {
+      "family": "Manrope",
+      "fallback": "Arial, sans-serif",
+      "weights": "400–700 variable",
+      "use": "Navigation, body copy, metadata, controls, and forms"
+    },
+    "fontsDirectory": "sitio/assets/fonts",
+    "formats": ["woff2"],
+    "subsets": ["Latin", "Latin Extended"],
+    "license": "SIL Open Font License 1.1",
+    "provenance": "Google Fonts; source URLs and license file names are recorded in sitio/assets/fonts/README.md"
+  },
+  "marks": {
+    "primary": "Alessandro Arenas wordmark",
+    "secondary": "Original AA line SVG symbol",
+    "favicon": "sitio/assets/favicon.svg"
+  },
+  "portfolio": {
+    "primaryCase": "Ventora",
+    "secondaryCase": "ICT Zella",
+    "presentation": "Text descriptions and links; no invented claims or product screenshots"
+  },
+  "layout": {
+    "shellMaxWidth": "1160px",
+    "desktopGutter": "32px",
+    "tabletGutterAt980px": "24px",
+    "mobileGutterAt760px": "20px",
+    "narrowGutterAt360px": "16px",
+    "breakpoints": [980, 760, 360],
+    "mobileBehavior": "Editorial grids stack; compact indexed rows remain; navigation toggles with aria-expanded state"
+  },
+  "components": {
+    "buttonRadius": "2px",
+    "inputRadius": "1px",
+    "focus": "3px outline with 4px offset",
+    "services": "Four numbered ruled rows",
+    "contact": "Preserve native validation, consent, privacy link, configured WhatsApp check, and in-browser message review handoff"
+  },
+  "accessibility": {
+    "skipLink": "First keyboard stop to main content",
+    "focusVisible": "Visible outline on keyboard focus",
+    "mobileNavigation": "Button label and aria-expanded reflect open state; selecting a link closes it",
+    "reducedMotion": "Reduce scroll, animation, and transition motion when prefers-reduced-motion is enabled"
+  },
+  "evidence": {
+    "sourceFiles": ["sitio/index.html", "sitio/styles.css", "sitio/script.js", "sitio/assets/fonts/README.md"],
+    "reviewCaptureDirectory": ".impeccable/review/",
+    "captureWidthsExplicitInNames": [319, 390, 768],
+    "note": "Documentation pass checked source and local capture inventory; no new visual or interaction validation was performed."
+  }
+}
+

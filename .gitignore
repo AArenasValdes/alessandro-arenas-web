@@ -10,6 +10,7 @@ coverage/
 .playwright/
 playwright-report/
 test-results/
+.impeccable/review/
 .claude/settings.local.json
 .claude.local.md
 *.log

@@ -24,5 +24,5 @@ Abrir `http://localhost:8000`.
 ## Importante
 No publiques antes de configurar el número comercial real en `sitio/config.js`, revisar política de privacidad, probar WhatsApp desde un celular y definir la URL definitiva para canonical y Open Graph. `config.js` es archivo público, nunca pegar llaves API o secretos.
 
-## Copia de origen
-Derivado del kit de lanzamiento previo. Se aplicaron correcciones editoriales mínimas y se añadió estructura de agentes, validación y configuración para Cloudflare; no se rediseñó toda la web.
+## Identidad visual
+La rama `design/atelier-nocturno` contiene una propuesta editorial con Instrument Serif y Manrope locales, paleta carbón/marfil/salvia y Ventora como caso principal. Las decisiones de identidad están en `DESIGN.md`; los hallazgos y capturas de revisión se guardan localmente bajo `.impeccable/review/`.
