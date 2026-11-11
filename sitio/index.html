@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#112039" />
-  <title>Alessandro Arenas | Software y automatización para empresas</title>
-  <meta name="description" content="Desarrollo páginas web, sistemas a medida y automatizaciones con inteligencia artificial para empresas. Desde La Serena, para todo Chile." />
+  <meta name="theme-color" content="#101311" />
+  <title>Alessandro Arenas | Desarrollo digital para empresas</title>
+  <meta name="description" content="Desarrollo páginas web, sistemas a medida y automatizaciones para empresas. Desde La Serena, para todo Chile." />
   <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Alessandro Arenas — Tecnología que simplifica tu negocio" />
-  <meta property="og:description" content="Software, páginas web y automatización de procesos para empresas de Chile." />
+  <meta property="og:title" content="Alessandro Arenas — Tecnología digital para empresas" />
+  <meta property="og:description" content="Páginas web, software y automatización de procesos para empresas de Chile." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_CL" />
-  <!-- Antes de publicar: agregar og:image y canonical con URL HTTPS absoluta del dominio definitivo. -->
+  <!-- Añadir URL absoluta de canonical y Open Graph al definir el dominio final. -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preload" href="assets/fonts/instrument-serif-regular-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="styles.css" />
   <script src="config.js" defer></script>
   <script src="script.js" defer></script>
@@ -21,67 +23,85 @@
   <a class="skip" href="#contenido">Saltar al contenido</a>
   <header class="header" id="inicio">
     <div class="shell nav">
-      <a class="logo-link" href="#inicio" aria-label="Inicio Alessandro Arenas"><img src="assets/logo.svg" width="204" height="54" alt="Alessandro Arenas" /></a>
-      <button type="button" class="nav-toggle" aria-label="Abrir navegación" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      <a class="brand" href="#inicio" aria-label="Alessandro Arenas, inicio">
+        <svg class="brand-symbol" viewBox="0 0 73 68" aria-hidden="true"><path d="M5 61 21 7 37 61M12 40h18M36 61 52 7 68 61M43 40h18" /></svg>
+        <span class="brand-name">Alessandro <span>Arenas</span></span>
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Abrir navegación" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
       <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a><a href="#ejemplo">Cómo funciona</a><a href="#proyecto">Proyectos reales</a><a href="#preguntas">Preguntas frecuentes</a>
+        <a href="#servicios">Servicios</a><a href="#ejemplo">Enfoque</a><a href="#proyecto">Proyectos</a><a href="#preguntas">Preguntas</a>
       </nav>
       <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
     </div>
   </header>
   <main id="contenido">
     <section class="hero">
-      <div class="hero-glow" aria-hidden="true"></div>
       <div class="shell hero-inner">
         <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> DESARROLLO DIGITAL PARA EMPRESAS</div>
-          <h1>Tecnología que <em>simplifica</em> tu negocio.</h1>
-          <p>Creo páginas web, sistemas personalizados y automatizaciones para que tu empresa tenga menos trabajo manual y más tiempo para crecer.</p>
-          <div class="hero-buttons"><a class="btn btn-primary" href="#contacto">Cuéntame tu proyecto <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#servicios">Explorar soluciones <span aria-hidden="true">↓</span></a></div>
-          <div class="hero-foot"><span><i class="check"></i> Atención directa</span><span><i class="check"></i> La Serena · Todo Chile</span></div>
+          <p class="hero-location">Soluciones digitales · La Serena, Chile</p>
+          <h1><span class="hero-line">Tecnología con criterio.</span><em class="hero-line">Hecha para tu negocio.</em></h1>
+          <p class="hero-intro">Desarrollo páginas web, sistemas y automatizaciones para tu empresa.</p>
+          <div class="hero-buttons"><a class="btn btn-primary" href="#contacto">Cuéntame tu proyecto <span aria-hidden="true">↗</span></a><a class="text-link hero-secondary" href="#proyecto">Ver proyectos <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-foot"><span>Atención directa</span><span>La Serena · Todo Chile</span></div>
         </div>
-        <div class="hero-art" aria-label="Ejemplo ilustrativo de un flujo comercial automatizado">
-          <div class="art-label"><span class="pulse"></span> EJEMPLO DE AUTOMATIZACIÓN <span>● ● ●</span></div>
-          <div class="art-panel">
-            <div class="panel-top"><span class="panel-top-icon">↗</span><span>De una solicitud a una gestión ordenada</span></div>
-            <div class="flow-node"><span class="node-icon lilac">✉</span><div><strong>Nueva solicitud</strong><small>Un cliente necesita una cotización</small></div><span class="node-badge">ENTRADA</span></div>
-            <div class="flow-connector"><span></span></div>
-            <div class="flow-node"><span class="node-icon blue">⚙</span><div><strong>Registro automático</strong><small>Datos organizados en tu sistema</small></div><span class="node-badge">PROCESO</span></div>
-            <div class="flow-connector"><span></span></div>
-            <div class="flow-node"><span class="node-icon green">✓</span><div><strong>Seguimiento preparado</strong><small>El equipo sabe qué hacer después</small></div><span class="node-badge success">LISTO</span></div>
-            <div class="art-bottom"><span class="tiny-signal"></span> Diseño ilustrativo de solución a medida</div>
+        <figure class="hero-art visual-demo" data-video-mp4="" data-video-webm="" data-video-poster="" data-video-label="">
+          <div class="demo-stage">
+            <svg class="concept-art" viewBox="0 0 720 520" role="img" aria-labelledby="concept-title">
+              <title id="concept-title">Ilustración conceptual: una solicitud se ordena y da paso a una acción.</title>
+              <rect width="720" height="520" fill="#1d2821" />
+              <path d="M54 397H666M54 124H666" stroke="#92a796" stroke-opacity=".3" />
+              <path class="concept-route" d="M112 260H230M492 260H604" fill="none" stroke="#92a796" stroke-width="2" stroke-dasharray="5 8" />
+              <g fill="#92a796"><circle cx="112" cy="260" r="5"/><circle cx="604" cy="260" r="5"/></g>
+              <g class="concept-request"><g transform="translate(80 182) rotate(-8 48 42)" fill="#c7d1c4"><rect width="92" height="76" rx="2"/><path d="M20 25h52M20 39h38M20 53h45" stroke="#4a5b51" stroke-width="3"/></g></g>
+              <g class="concept-document"><path d="M257 125h211v269H257z" fill="#63796a"/><path d="M245 116h211v269H245z" fill="#a8baaa"/><path d="M233 106h211v269H233z" fill="#f3f0e9"/><path d="M267 158h97M267 182h143M267 207h118M267 261h143M267 282h126M267 303h135" stroke="#4a5b51" stroke-width="4" stroke-linecap="round" opacity=".7"/></g>
+              <g class="concept-check"><circle cx="529" cy="260" r="48" fill="#92a796"/><path d="m508 259 14 14 29-33" fill="none" stroke="#101311" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></g>
+              <text x="54" y="458" fill="#c9d2c8" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">DE LA SOLICITUD A LA ACCIÓN</text>
+            </svg>
           </div>
-          <div class="float-card"><span>◆</span><span>Menos tareas repetitivas.<br /><strong>Más control de tu operación.</strong></span></div>
-        </div>
+          <button class="demo-toggle" type="button" hidden>Pausar animación</button>
+          <figcaption>Demostración conceptual · Una idea, un proceso más claro.</figcaption>
+        </figure>
       </div>
+      <div class="hero-bottom shell"><span>Web</span><i></i><span>Software</span><i></i><span>Automatización</span><i></i><span>IA aplicada</span></div>
     </section>
-    <section class="value-strip">
+    <section class="value-strip" aria-label="Forma de trabajo">
       <div class="shell value-grid"><div><span>01</span><strong>Soluciones a tu medida</strong></div><div><span>02</span><strong>Procesos más ordenados</strong></div><div><span>03</span><strong>Herramientas fáciles de usar</strong></div></div>
     </section>
     <section class="section services" id="servicios">
       <div class="shell">
-        <div class="section-top"><div><div class="kicker">LO QUE PUEDO HACER POR TU NEGOCIO</div><h2>Soluciones que resuelven<br /><em>problemas reales.</em></h2></div><p>No necesitas tecnología complicada. Necesitas herramientas que se adapten a cómo funciona tu empresa.</p></div>
-        <div class="services-grid">
-          <article class="service-card"><div class="service-head"><span class="service-icon">⌘</span><span>01 / DESARROLLO</span></div><h3>Páginas web profesionales para tu negocio</h3><p>Sitios profesionales, landing pages, formularios de contacto y una presencia digital clara para tus clientes.</p><div class="chips"><span>Landing pages</span><span>Web corporativa</span><span>SEO inicial</span></div></article>
-          <article class="service-card"><div class="service-head"><span class="service-icon">▦</span><span>02 / SOFTWARE</span></div><h3>Sistemas adaptados a tu operación</h3><p>Plataformas para administrar clientes, cotizaciones, órdenes de trabajo y procesos propios de tu empresa.</p><div class="chips"><span>Clientes</span><span>Cotizaciones</span><span>Gestión</span></div></article>
-          <article class="service-card"><div class="service-head"><span class="service-icon">⤨</span><span>03 / AUTOMATIZACIÓN</span></div><h3>Menos tareas manuales</h3><p>Conecto tus formularios, correos, planillas y sistemas para que la información llegue donde corresponde.</p><div class="chips"><span>Integraciones</span><span>Flujos</span><span>Avisos</span></div></article>
-          <article class="service-card"><div class="service-head"><span class="service-icon">✳</span><span>04 / INTELIGENCIA ARTIFICIAL</span></div><h3>IA aplicada a procesos concretos</h3><p>Clasificación de consultas, lectura de documentos y asistentes que apoyan tareas repetitivas con supervisión humana.</p><div class="chips"><span>Documentos</span><span>Asistentes</span><span>Procesos</span></div></article>
+        <div class="section-top"><div><p class="kicker">SERVICIOS</p><h2>Resolver lo concreto.<br /><em>Con la herramienta adecuada.</em></h2></div><p>No necesitas tecnología complicada. Necesitas herramientas que se adapten a cómo funciona tu empresa.</p></div>
+        <div class="services-list">
+          <article class="service-row"><span class="service-index">01</span><div><h3>Páginas web para tu negocio</h3><p>Sitios profesionales, landing pages, formularios de contacto y una presencia digital clara para tus clientes.</p></div><span class="service-detail">Diseño · Desarrollo · SEO inicial</span></article>
+          <article class="service-row"><span class="service-index">02</span><div><h3>Sistemas adaptados a tu operación</h3><p>Plataformas para administrar clientes, cotizaciones, órdenes de trabajo y procesos propios de tu empresa.</p></div><span class="service-detail">Clientes · Cotizaciones · Gestión</span></article>
+          <article class="service-row"><span class="service-index">03</span><div><h3>Automatización de procesos</h3><p>Conecto tus formularios, correos, planillas y sistemas para que la información llegue donde corresponde.</p></div><span class="service-detail">Integraciones · Flujos · Avisos</span></article>
+          <article class="service-row"><span class="service-index">04</span><div><h3>Inteligencia artificial aplicada</h3><p>Clasificación de consultas, lectura de documentos y asistentes que apoyan tareas repetitivas con supervisión humana.</p></div><span class="service-detail">Documentos · Asistentes · Procesos</span></article>
         </div>
       </div>
     </section>
-    <section class="section feature" id="ejemplo">
-      <div class="shell feature-grid">
-        <div><div class="kicker">UN CASO COTIDIANO</div><h2>Deja de perseguir<br /><em>la información.</em></h2><p>Piensa en lo que sucede cuando te llega una consulta por WhatsApp, alguien toma nota en una planilla y después nadie recuerda hacer seguimiento.</p><p>Un sistema bien diseñado puede ordenar ese recorrido, dejar trazabilidad y reducir tareas duplicadas.</p><a href="#contacto" class="text-link">Evaluemos tu proceso <span aria-hidden="true">↗</span></a></div>
-        <div class="feature-demo"><div class="feature-demo-head"><span class="colored-dot"></span><strong>Ejemplo de flujo de atención</strong><small>DEMOSTRACIÓN CONCEPTUAL</small></div><div class="demo-line"><span class="demo-number">1</span><div><b>Llega una solicitud</b><p>Formulario o canal habilitado</p></div><span class="demo-state">Entrada</span></div><div class="demo-line"><span class="demo-number">2</span><div><b>Se organiza la información</b><p>Ficha de cliente y detalle</p></div><span class="demo-state">Automático</span></div><div class="demo-line"><span class="demo-number">3</span><div><b>Se prepara una acción</b><p>Asignar, responder o cotizar</p></div><span class="demo-state">Revisión</span></div><div class="demo-line"><span class="demo-number">4</span><div><b>Se controla el estado</b><p>Pendiente, en proceso o resuelto</p></div><span class="demo-state end">Seguimiento</span></div></div>
+    <section class="section approach" id="ejemplo">
+      <div class="shell approach-grid">
+        <div class="approach-copy"><p class="kicker">EL PUNTO DE PARTIDA</p><h2>Entender el proceso<br />antes de <em>automatizarlo.</em></h2><p>Cuando una consulta llega por WhatsApp, alguien la anota en una planilla y después nadie recuerda hacer seguimiento, el problema no siempre es falta de tecnología.</p><p>Primero revisamos cómo se trabaja hoy. Luego definimos qué conviene ordenar, conectar o desarrollar.</p><a href="#contacto" class="text-link">Evaluemos tu proceso <span aria-hidden="true">↗</span></a></div>
+        <div class="approach-note"><span class="note-rule" aria-hidden="true"></span><p class="note-quote">Una buena solución empieza por escuchar cómo funciona el negocio.</p><div class="note-steps"><span>Consulta</span><i aria-hidden="true">→</i><span>Proceso</span><i aria-hidden="true">→</i><span>Solución</span></div><small>Cada proyecto parte de una necesidad concreta.</small></div>
       </div>
     </section>
-    <section class="section case" id="proyecto">
-      <div class="shell case-grid"><div><div class="kicker">EXPERIENCIA APLICADA</div><h2>Proyectos reales.<br />Experiencia aplicada.</h2><p>Desarrollo <strong>Ventora</strong>, una plataforma orientada a la cotización comercial de negocios de vidrio, aluminio y PVC.</p><p>Este proyecto reúne experiencia en procesos de negocio, interfaces, clientes, documentos y suscripciones.</p><a href="https://ventorap.cl" class="text-link" id="ventoraLink" target="_blank" rel="noopener noreferrer">Conoce Ventora <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a><small>Ventora es un producto separado de los servicios personalizados.</small><div class="second-case"><h3>ICT Zella</h3><p>Un diario de trading digital para registrar y revisar operaciones.</p><a href="https://martin-trader-ict-zella.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Conoce ICT Zella <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a></div></div><div class="case-card"><div class="case-mark">V<span>✳</span></div><div class="case-name">Ventora<span>Plataforma de cotización comercial</span></div><div class="case-list"><div><span>✓</span> Cotizaciones comerciales</div><div><span>✓</span> Gestión de clientes</div><div><span>✓</span> Documentos PDF</div><div><span>✓</span> Flujo de aprobación</div></div><div class="case-caption">Producto desarrollado por Alessandro Arenas</div></div></div>
+    <section class="section portfolio" id="proyecto">
+      <div class="shell">
+        <div class="portfolio-heading"><div><p class="kicker light">PORTAFOLIO</p><h2>Proyectos desarrollados<br /><em>en la práctica.</em></h2></div><p>Dos proyectos que aplican tecnología en contextos distintos.</p></div>
+        <article class="case-primary">
+          <div class="case-primary-top"><span class="case-label">CASO PRINCIPAL</span><span class="case-location">01 / 02</span></div>
+          <div class="case-primary-main"><div class="case-wordmark"><h3>Ventora</h3><span class="case-descriptor">PLATAFORMA PARA NEGOCIOS DE VIDRIO, ALUMINIO Y PVC</span><figure class="project-visual visual-ventora"><img src="assets/ventora-editorial.svg" width="960" height="540" loading="lazy" decoding="async" alt="Composición editorial abstracta de planos de vidrio para Ventora" /><figcaption>Composición editorial</figcaption></figure></div><div class="case-description"><p>Plataforma de cotización comercial para negocios de vidrio, aluminio y PVC.</p><a href="https://ventorap.cl" class="text-link" id="ventoraLink" target="_blank" rel="noopener noreferrer">Conoce Ventora <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a></div></div>
+          <div class="case-primary-bottom"><span>Producto desarrollado por Alessandro Arenas</span><span>Vidrio · Aluminio · PVC</span></div>
+        </article>
+        <article class="case-secondary">
+          <div class="case-secondary-index">02</div><div class="case-secondary-name"><p class="case-label">PROYECTO 02</p><h3>ICT Zella</h3><figure class="project-visual visual-zella"><img src="assets/zella-editorial.svg" width="960" height="480" loading="lazy" decoding="async" alt="Composición editorial abstracta de páginas para ICT Zella" /><figcaption>Composición editorial</figcaption></figure></div><div class="case-secondary-description"><p>Diario digital de trading para registrar y revisar operaciones.</p><a href="https://martin-trader-ict-zella.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Conoce ICT Zella <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a></div>
+        </article>
+        <p class="portfolio-footnote">Ventora e ICT Zella son productos independientes; sus servicios y condiciones se consultan en sus propios sitios.</p>
+      </div>
     </section>
-    <section class="section process"><div class="shell"><div class="section-top"><div><div class="kicker">CÓMO TRABAJO</div><h2>Simple desde el<br /><em>primer contacto.</em></h2></div><p>Antes de desarrollar, definimos el problema y el alcance. Así se evitan proyectos interminables y gastos innecesarios.</p></div><div class="process-grid"><div><span>01</span><h3>Me cuentas tu problema</h3><p>Revisamos el proceso que quieres mejorar y el resultado que buscas.</p></div><div><span>02</span><h3>Te propongo una solución</h3><p>Definimos funcionalidades, tiempos, inversión y qué queda fuera.</p></div><div><span>03</span><h3>Construyo e implemento</h3><p>Entrego la solución, verificamos juntos su funcionamiento y acordamos los próximos pasos.</p></div></div></div></section>
-    <section class="section faqs" id="preguntas"><div class="shell faq-grid"><div><div class="kicker">PREGUNTAS FRECUENTES</div><h2>Antes de empezar.</h2><p>Estas son algunas dudas habituales cuando una empresa evalúa una solución digital.</p></div><div class="faq-list"><details><summary>¿Trabajas solo con empresas de La Serena y Coquimbo?</summary><p>No. Atiendo desde la Región de Coquimbo y puedo colaborar de manera remota con empresas de todo Chile.</p></details><details><summary>¿Cuánto cuesta un proyecto?</summary><p>Depende del alcance, las integraciones y el mantenimiento requerido. Primero reviso lo que necesitas y luego preparo una propuesta con precio y entregables definidos.</p></details><details><summary>¿Puedo automatizar algo sin crear un sistema completo?</summary><p>Sí. En muchos casos es suficiente integrar las herramientas que ya utilizas. Recomendaré una solución nueva solo si aporta valor real.</p></details><details><summary>¿Se puede integrar WhatsApp e inteligencia artificial?</summary><p>Existen integraciones oficiales y flujos autorizados según el caso. Antes de implementarlos es necesario revisar permisos, costos, políticas de la plataforma y tratamiento de datos.</p></details></div></div></section>
-    <section class="contact-section" id="contacto"><div class="shell contact-grid"><div><div class="kicker light">HABLEMOS DE TU PROYECTO</div><h2>¿Qué proceso de tu empresa te gustaría <em>simplificar?</em></h2><p>Cuéntame brevemente qué haces y qué necesitas mejorar. Podemos partir por una solución pequeña y escalar cuando realmente lo necesites.</p><div class="contact-note"><span>✳</span><span>La primera conversación es para entender tu necesidad, sin compromisos de contratación.</span></div></div><div class="contact-form-wrap"><form id="contactForm"><p class="form-availability" id="formAvailability" role="status">Comprobando disponibilidad de WhatsApp…</p><noscript><p>Activa JavaScript para preparar el mensaje de WhatsApp.</p></noscript><label for="nombre">Tu nombre <span aria-hidden="true">*</span></label><input id="nombre" name="nombre" autocomplete="name" required minlength="2" placeholder="¿Cómo te llamas?" /><label for="empresa">Empresa o rubro</label><input id="empresa" name="empresa" autocomplete="organization" placeholder="Ej. taller de aluminio" /><label for="servicio">¿En qué necesitas ayuda? <span aria-hidden="true">*</span></label><select id="servicio" name="servicio" required><option value="">Selecciona una opción</option><option>Página web o landing page</option><option>Sistema a medida</option><option>Automatización de procesos</option><option>Solución con inteligencia artificial</option><option>No estoy seguro; quiero orientación</option></select><label for="detalle">Cuéntame brevemente tu idea <span aria-hidden="true">*</span></label><textarea id="detalle" name="detalle" rows="3" required minlength="10" placeholder="¿Cómo lo haces hoy y qué te gustaría mejorar?"></textarea><label class="consent"><input type="checkbox" id="consent" required /><span>Acepto abrir WhatsApp con esta información para solicitar contacto. <a href="privacidad.html">Privacidad</a>.</span></label><button class="btn btn-primary form-submit" type="submit" disabled>Continuar por WhatsApp <span aria-hidden="true">↗</span></button><p class="form-foot">El mensaje se prepara en tu navegador. Revisa su contenido antes de enviarlo en WhatsApp; evita incluir datos sensibles.</p><p class="form-message" id="formMessage" role="status" aria-live="polite"></p></form></div></div></section>
+    <section class="section process"><div class="shell"><div class="section-top"><div><p class="kicker">CÓMO TRABAJO</p><h2>Simple desde el<br /><em>primer contacto.</em></h2></div><p>Antes de desarrollar, definimos el problema y el alcance. Así se evitan proyectos interminables y gastos innecesarios.</p></div><div class="process-list"><article><span>01</span><div><h3>Me cuentas tu problema</h3><p>Revisamos el proceso que quieres mejorar y el resultado que buscas.</p></div></article><article><span>02</span><div><h3>Te propongo una solución</h3><p>Definimos funcionalidades, tiempos, inversión y qué queda fuera.</p></div></article><article><span>03</span><div><h3>Construyo e implemento</h3><p>Entrego la solución, verificamos juntos su funcionamiento y acordamos los próximos pasos.</p></div></article></div></div></section>
+    <section class="section faqs" id="preguntas"><div class="shell faq-grid"><div class="faq-heading"><p class="kicker">PREGUNTAS FRECUENTES</p><h2>Antes de empezar.</h2><p>Algunas dudas habituales cuando una empresa evalúa una solución digital.</p></div><div class="faq-list"><details><summary>¿Trabajas solo con empresas de La Serena y Coquimbo?</summary><p>No. Atiendo desde la Región de Coquimbo y puedo colaborar de manera remota con empresas de todo Chile.</p></details><details><summary>¿Cuánto cuesta un proyecto?</summary><p>Depende del alcance, las integraciones y el mantenimiento requerido. Primero reviso lo que necesitas y luego preparo una propuesta con precio y entregables definidos.</p></details><details><summary>¿Puedo automatizar algo sin crear un sistema completo?</summary><p>Sí. En muchos casos es suficiente integrar las herramientas que ya utilizas. Recomendaré una solución nueva solo si aporta valor real.</p></details><details><summary>¿Se puede integrar WhatsApp e inteligencia artificial?</summary><p>Existen integraciones oficiales y flujos autorizados según el caso. Antes de implementarlos es necesario revisar permisos, costos, políticas de la plataforma y tratamiento de datos.</p></details></div></div></section>
+    <section class="contact-section" id="contacto"><div class="shell contact-grid"><div class="contact-copy"><p class="kicker light">HABLEMOS DE TU PROYECTO</p><h2>¿Qué proceso de tu empresa te gustaría <em>simplificar?</em></h2><p>Cuéntame brevemente qué haces y qué necesitas mejorar. Podemos partir por una solución pequeña y escalar cuando realmente lo necesites.</p><div class="contact-note"><span class="contact-note-mark" aria-hidden="true">AA</span><span>La primera conversación es para entender tu necesidad, sin compromisos de contratación.</span></div></div><div class="contact-form-wrap"><form id="contactForm"><p class="form-availability" id="formAvailability" role="status">Comprobando disponibilidad de WhatsApp…</p><noscript><p>Activa JavaScript para preparar el mensaje de WhatsApp.</p></noscript><label for="nombre">Tu nombre <span aria-hidden="true">*</span></label><input id="nombre" name="nombre" autocomplete="name" required minlength="2" placeholder="¿Cómo te llamas?" /><label for="empresa">Empresa o rubro</label><input id="empresa" name="empresa" autocomplete="organization" placeholder="Ej. taller de aluminio" /><label for="servicio">¿En qué necesitas ayuda? <span aria-hidden="true">*</span></label><select id="servicio" name="servicio" required><option value="">Selecciona una opción</option><option>Página web o landing page</option><option>Sistema a medida</option><option>Automatización de procesos</option><option>Solución con inteligencia artificial</option><option>No estoy seguro; quiero orientación</option></select><label for="detalle">Cuéntame brevemente tu idea <span aria-hidden="true">*</span></label><textarea id="detalle" name="detalle" rows="3" required minlength="10" placeholder="¿Cómo lo haces hoy y qué te gustaría mejorar?"></textarea><label class="consent"><input type="checkbox" id="consent" required /><span>Acepto abrir WhatsApp con esta información para solicitar contacto. <a href="privacidad.html">Privacidad</a>.</span></label><button class="btn btn-primary form-submit" type="submit" disabled>Continuar por WhatsApp <span aria-hidden="true">↗</span></button><p class="form-foot">El mensaje se prepara en tu navegador. Revisa su contenido antes de enviarlo en WhatsApp; evita incluir datos sensibles.</p><p class="form-message" id="formMessage" role="status" aria-live="polite"></p></form></div></div></section>
   </main>
-  <footer class="footer"><div class="shell footer-grid"><div><img src="assets/logo-light.svg" width="207" height="54" alt="Alessandro Arenas"/><p>Software, automatización e inteligencia artificial aplicados a empresas.</p></div><div><strong>Explorar</strong><a href="#servicios">Servicios</a><a href="#proyecto">Proyectos reales</a><a href="#contacto">Contacto</a></div><div><strong>Redes</strong><span data-social="instagram" hidden>Instagram</span><span data-social="facebook" hidden>Facebook</span><a id="footerEmail" hidden>Correo electrónico</a><a href="privacidad.html">Privacidad</a></div></div><div class="shell footer-bottom"><span>© <span id="year"></span> Alessandro Arenas</span><span>La Serena, Chile · Atención en todo Chile</span></div></footer>
+  <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><a class="brand brand-footer" href="#inicio" aria-label="Alessandro Arenas, volver al inicio"><svg class="brand-symbol" viewBox="0 0 73 68" aria-hidden="true"><path d="M5 61 21 7 37 61M12 40h18M36 61 52 7 68 61M43 40h18" /></svg><span class="brand-name">Alessandro <span>Arenas</span></span></a><p>Software, automatización e inteligencia artificial aplicados a empresas.</p></div><div><strong>Explorar</strong><a href="#servicios">Servicios</a><a href="#proyecto">Proyectos</a><a href="#contacto">Contacto</a></div><div><strong>Enlaces</strong><span data-social="instagram" hidden>Instagram</span><span data-social="facebook" hidden>Facebook</span><a id="footerEmail" hidden>Correo electrónico</a><a href="privacidad.html">Privacidad</a></div></div><div class="shell footer-bottom"><span>© <span id="year"></span> Alessandro Arenas</span><span>La Serena, Chile · Atención en todo Chile</span></div></footer>
 </body>
 </html>

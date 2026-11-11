@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-label="Composición abstracta de planos de vidrio para Ventora">
+  <rect width="960" height="540" fill="#18201b"/>
+  <path d="M103 419h754M103 119h754" stroke="#92a796" stroke-opacity=".35"/>
+  <path d="M239 130 478 95v306L239 442z" fill="#92a796" fill-opacity=".22" stroke="#c3d0c1" stroke-width="2"/>
+  <path d="m478 95 237 35v312l-237-41z" fill="#f3f0e9" fill-opacity=".08" stroke="#c3d0c1" stroke-width="2"/>
+  <path d="M239 276 478 258l237 18M478 95v306" fill="none" stroke="#c3d0c1" stroke-opacity=".7"/>
+  <circle cx="478" cy="258" r="6" fill="#f3f0e9"/>
+  <text x="54" y="76" fill="#c3d0c1" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">VENTORA</text>
+  <text x="54" y="496" fill="#c3d0c1" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">VIDRIO · ALUMINIO · PVC</text>
+</svg>
