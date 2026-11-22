@@ -25,7 +25,7 @@
   <a class="brand" href="#inicio"><img src="assets/firma.svg" width="31" height="29" alt="" /> Alessandro Arenas</a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir navegación">Menú</button>
   <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
-    <a href="#proyecto">Proyectos</a><a href="#servicios">Servicios</a><a href="#ejemplo">Enfoque</a>
+    <a href="#proyecto">Proyectos</a><a href="#servicios">Servicios</a><a href="#ejemplo">Enfoque</a><a href="#contacto">Contacto</a>
   </nav>
   <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
 </div></header>
@@ -34,8 +34,8 @@
   <div class="hero-copy">
     <p class="eyebrow"><span class="signal"></span> Desarrollo digital independiente</p>
     <h1>Haz que tu negocio<br /> llegue <em>más lejos.</em></h1>
-    <p class="intro">Desarrollo software, páginas web y automatizaciones con IA que ayudan a las empresas a ahorrar tiempo y trabajar mejor.</p>
-    <div class="actions"><a class="pill" href="#contacto">Cuéntame tu proyecto <span aria-hidden="true">↗</span></a><a class="line-link" href="#proyecto">Explorar proyectos <span aria-hidden="true">↓</span></a></div>
+    <p class="intro">Desarrollo software a medida, páginas web y automatizaciones que eliminan tareas repetitivas y simplifican el trabajo de tu empresa.</p>
+    <div class="actions"><a class="pill" id="directWhatsapp" href="#contacto" hidden>Hablar por WhatsApp <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a><a class="line-link" href="#contacto">Contar mi proyecto <span aria-hidden="true">↓</span></a></div>
   </div>
   <div class="art"><img class="sculpture" src="assets/escultura.webp" width="1050" height="788" alt="" fetchpriority="high" /></div>
   <div class="origin">La Serena, Chile <span></span> Atención en todo el país</div>
@@ -45,18 +45,18 @@
   <p>Dos sistemas en uso, creados para resolver necesidades distintas.</p></div>
   <article class="case"><div class="case-copy">
     <p class="category">Software comercial</p><h3>Ventora</h3>
-    <p>Cotizaciones para talleres de vidrio, aluminio y PVC. Del registro de medidas al presupuesto para el cliente.</p>
-    <a class="line-link" href="https://ventorap.cl" id="ventoraLink" target="_blank" rel="noopener noreferrer">Ver Ventora <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a>
+    <p>Para talleres que necesitan ordenar cotizaciones de vidrio, aluminio y PVC, desarrollé una plataforma que reúne medidas y presupuestos. Muestra mi trabajo en software comercial adaptado a una operación real.</p>
+    <a class="line-link" href="https://ventorap.cl" id="ventoraLink" data-project="ventora" target="_blank" rel="noopener noreferrer">Ver Ventora <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a>
   </div><figure><a href="assets/ventora-panel.webp" aria-label="Ampliar captura del panel comercial de Ventora"><img src="assets/ventora-panel.webp" width="1024" height="492" loading="lazy" alt="Panel comercial de Ventora con cotizaciones pendientes y recientes" /></a>
     <figcaption>Panel comercial · Datos ficticios <a href="assets/ventora-sitio.webp">Ver portada ↗</a></figcaption></figure></article>
   <article class="case trading"><div class="case-copy">
     <p class="category">Bitácora de operaciones</p><h3>Software de <em>Trading ICT</em></h3>
-    <p>Un diario de trading para registrar operaciones y revisar su evolución en un mismo panel.</p>
-    <a class="line-link" href="https://martin-trader-ict-zella.vercel.app/" target="_blank" rel="noopener noreferrer">Ver aplicación <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a>
+    <p>Para revisar operaciones de trading en un solo lugar, desarrollé un diario digital con registro y visualización de su evolución. Muestra mi trabajo con datos y paneles de consulta.</p>
+    <a class="line-link" href="https://martin-trader-ict-zella.vercel.app/" data-project="trading-ict" target="_blank" rel="noopener noreferrer">Ver aplicación <span aria-hidden="true">↗</span><span class="sr-only"> (abre una pestaña nueva)</span></a>
   </div><figure><a href="assets/trading-ict-panel.webp" aria-label="Ampliar captura del diario de trading"><img src="assets/trading-ict-panel.webp" width="1600" height="800" loading="lazy" alt="Indicadores y curva de rendimiento de operaciones ficticias" /></a><figcaption>Diario de trading · Datos ficticios</figcaption></figure></article>
 </div></section>
 <section class="impact" id="ejemplo"><div class="shell split">
-  <div><p class="eyebrow">Enfoque</p><h2>Menos tareas manuales.<br /><em>Más capacidad.</em></h2><p>Primero identificamos dónde se repite el trabajo. Luego conectamos esos pasos para que tu equipo pueda dedicar más tiempo a atender cada proyecto.</p></div>
+  <div><p class="eyebrow">Enfoque</p><h2>Menos trabajo manual.<br /><em>Más tiempo para tus clientes.</em></h2><p>Identificamos tareas repetitivas y organizamos los procesos para que tu equipo pueda dedicar más tiempo a atender clientes.</p></div>
   <figure><img src="assets/impacto.svg" width="600" height="240" alt="" loading="lazy" /><figcaption>Evolución de un proceso · Curva ilustrativa</figcaption></figure>
 </div></section>
 <section id="servicios" class="services"><div class="shell split">
@@ -68,6 +68,7 @@
     <dt>Integración de procesos</dt><dd>Conexiones entre formularios, planillas y sistemas para evitar el doble registro.</dd>
   </dl>
 </div></section>
+<section class="about"><div class="shell split"><div><p class="eyebrow">Atención directa</p><h2>Tecnología desarrollada con <em>atención directa.</em></h2></div><p>Soy Alessandro Arenas, desarrollador de software de La Serena. Trabajo directamente con empresas para entender sus procesos, diseñar soluciones digitales e implementar herramientas que faciliten su operación.</p></div></section>
 <section class="faq" id="preguntas"><div class="shell split"><h2>Preguntas <em>frecuentes.</em></h2><div class="faq-list"><details><summary>¿Trabajas solo con empresas de La Serena y Coquimbo?</summary><p>No. Atiendo desde la Región de Coquimbo y puedo colaborar de manera remota con empresas de todo Chile.</p></details><details><summary>¿Cuánto cuesta un proyecto?</summary><p>Depende del alcance, las integraciones y el mantenimiento requerido. Primero reviso lo que necesitas y luego preparo una propuesta con precio y entregables definidos.</p></details><details><summary>¿Puedo automatizar algo sin crear un sistema completo?</summary><p>Sí. En muchos casos es suficiente integrar las herramientas que ya utilizas. Recomendaré una solución nueva solo si aporta valor real.</p></details><details><summary>¿Se puede integrar WhatsApp e inteligencia artificial?</summary><p>Existen integraciones oficiales y flujos autorizados según el caso. Antes de implementarlos es necesario revisar permisos, costos, políticas de la plataforma y tratamiento de datos.</p></details></div></div></section>
 <section id="contacto" class="contact"><div class="shell split"><div><p class="eyebrow">Contacto</p><h2>Hablemos de<br /><em>tu proyecto.</em></h2><p>Cuéntame qué haces hoy y qué te gustaría simplificar.</p></div>
 <form id="contactForm">
@@ -92,8 +93,7 @@
           </select>
           <label for="detalle">Cuéntame brevemente tu idea <span aria-hidden="true">*</span>
           </label>
-          <textarea id="detalle" name="detalle" rows="3" required minlength="10" placeholder="¿Cómo lo haces hoy y qué te gustaría mejorar?">
-          </textarea>
+          <textarea id="detalle" name="detalle" rows="3" required minlength="10" placeholder="¿Cómo lo haces hoy y qué te gustaría mejorar?"></textarea>
           <label class="consent">
           <input type="checkbox" id="consent" required />
           <span>Acepto abrir WhatsApp con esta información para solicitar contacto. <a href="privacidad.html">Privacidad</a>.</span>

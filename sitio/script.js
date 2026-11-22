@@ -40,6 +40,20 @@
   const submit = form?.querySelector('[type=submit]');
   const phone = String(config.whatsapp || '').replace(/[^0-9]/g, '');
   const configured = phone.length >= 10 && phone.length <= 15;
+  // Local events only. A future analytics adapter can subscribe without receiving form data.
+  const track = (name, detail = {}) => document.dispatchEvent(new CustomEvent(name, { detail }));
+  const directWhatsapp = document.getElementById('directWhatsapp');
+  if (configured && directWhatsapp) {
+    directWhatsapp.href = `https://wa.me/${phone}?text=${encodeURIComponent('Hola Alessandro, me gustaría conversar sobre un proyecto.')}`;
+    directWhatsapp.target = '_blank';
+    directWhatsapp.rel = 'noopener noreferrer';
+    directWhatsapp.hidden = false;
+    directWhatsapp.addEventListener('click', () => track('contact_whatsapp_click'));
+  }
+  form?.addEventListener('focusin', () => track('contact_form_start'), { once: true });
+  document.querySelectorAll('[data-project]').forEach(link => {
+    link.addEventListener('click', () => track('portfolio_project_click', { project: link.dataset.project }));
+  });
   if (submit && availability) {
     submit.disabled = !configured;
     availability.textContent = configured ? 'Al continuar, podrás revisar el mensaje en WhatsApp antes de enviarlo.' : 'Contacto por WhatsApp temporalmente no disponible.';
@@ -60,6 +74,7 @@
     }
     const mensaje = `Hola Alessandro, te contacto desde tu página web.\n\nNombre: ${nombre}\nEmpresa/rubro: ${empresa || 'No indicado'}\nNecesito: ${servicio}\nDetalle: ${detalle}`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(mensaje)}`;
+    track('contact_form_whatsapp_click');
     window.open(url, '_blank', 'noopener,noreferrer');
     feedback.textContent = 'Revisa el mensaje en WhatsApp y presiona Enviar para completar tu consulta. Si no se abrió, permite las ventanas emergentes y vuelve a intentarlo.';
   });
