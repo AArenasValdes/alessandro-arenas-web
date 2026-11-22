@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" fill="none">
+<defs><linearGradient id="ink"><stop stop-color="#334c40"/><stop offset=".5" stop-color="#acf0c5"/><stop offset="1" stop-color="#67d49d"/></linearGradient><linearGradient id="fill" x2="0" y2="1"><stop stop-color="#67d49d" stop-opacity=".26"/><stop offset="1" stop-color="#67d49d" stop-opacity="0"/></linearGradient><radialGradient id="dot"><stop stop-color="white"/><stop offset=".4" stop-color="#acf0c5"/><stop offset="1" stop-color="#67d49d" stop-opacity="0"/></radialGradient></defs>
+<path d="M24 209H580M24 154H580M24 99H580M110 52V210M255 52V210M400 52V210M545 52V210" stroke="#79998a" stroke-opacity=".18" stroke-dasharray="2 6"/>
+<path d="M20 196C123 196 121 155 192 155S267 166 320 111 390 94 430 79 500 34 582 28V215H20Z" fill="url(#fill)"/>
+<path d="M20 196C123 196 121 155 192 155S267 166 320 111 390 94 430 79 500 34 582 28" stroke="url(#ink)" stroke-width="3"/>
+<g class="point"><circle cx="430" cy="79" r="16" fill="url(#dot)"/><circle cx="430" cy="79" r="4" fill="#effff5"/></g>
+<style>@media(prefers-reduced-motion:no-preference){.point{animation:pulse 2s ease-in-out 2}@keyframes pulse{50%{opacity:.45}}}</style></svg>
