@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-<defs><linearGradient id="g"><stop stop-color="#112039"/><stop offset="1" stop-color="#18385C"/></linearGradient><radialGradient id="r"><stop stop-color="#6CE1C2" stop-opacity=".18"/><stop offset="1" stop-color="#6CE1C2" stop-opacity="0"/></radialGradient></defs>
-<rect width="1200" height="630" fill="url(#g)"/><circle cx="1060" cy="75" r="400" fill="url(#r)"/><rect x="86" y="81" width="94" height="94" rx="24" fill="#29405D"/><path d="M104 149l22-48h12l-19 48m3-17h28m0 17 20-48h12l-19 48m0-17h20" stroke="#6CE1C2" stroke-width="5" fill="none" stroke-linecap="round"/>
-<text x="89" y="249" fill="#6CE1C2" font-family="Arial,sans-serif" font-size="27" font-weight="700">ALESSANDRO ARENAS</text>
-<text x="88" y="338" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="59" font-weight="700">Tecnología que simplifica</text><text x="88" y="414" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="59" font-weight="700">tu negocio.</text>
-<text x="91" y="508" fill="#BCCCE0" font-family="Arial,sans-serif" font-size="26">Software a medida · Automatización · Inteligencia artificial</text>
+  <rect width="1200" height="630" fill="#101311" />
+  <path d="M5 61 21 7 37 61M12 40h18M36 61 52 7 68 61M43 40h18" transform="translate(930 190) scale(3)" fill="none" stroke="#92A796" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" opacity=".72" />
+  <text x="88" y="114" fill="#92A796" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4">ALESSANDRO ARENAS</text>
+  <text x="83" y="296" fill="#F3F0E9" font-family="Georgia,serif" font-size="77">Tecnología con criterio.</text>
+  <text x="83" y="387" fill="#92A796" font-family="Georgia,serif" font-size="77" font-style="italic">Hecha para tu negocio.</text>
+  <text x="88" y="500" fill="#A6A9A3" font-family="Arial,sans-serif" font-size="23">Páginas web · Software · Automatización</text>
+  <text x="88" y="544" fill="#A6A9A3" font-family="Arial,sans-serif" font-size="18">La Serena, Chile · Atención en todo Chile</text>
 </svg>
