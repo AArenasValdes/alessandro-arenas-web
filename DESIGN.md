@@ -36,7 +36,7 @@ components:
 
 **Creative North Star: “Atelier Nocturno: tecnología editorial de autor.”** The site presents Alessandro Arenas as an independent digital solutions specialist through editorial serif typography, generous spacing, restrained line work, and alternating charcoal, ivory, and deep-green surfaces. The Alessandro Arenas wordmark is the primary identity; the original AA line symbol supports it and is never a substitute for the name.
 
-Ventora is the primary portfolio case, followed by ICT Zella as the secondary case. Both are described using supplied product facts and text links; the portfolio does not invent customer outcomes, testimonials, or product screenshots. The experience is a static HTML, CSS, and JavaScript site.
+Ventora is the primary portfolio case, followed by Software de Trading ICT as the secondary case. Ventora shows its public website and an authorized capture of the commercial dashboard; the trading case uses an authorized, cropped dashboard capture. Both dashboards are labeled as fictional demonstration data. The portfolio does not invent customer outcomes or testimonials. The experience is a static HTML, CSS, and JavaScript site.
 
 **Key Characteristics:**
 - Editorial serif titles paired with a practical sans-serif interface.
@@ -104,7 +104,7 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 ### Services and portfolio
 - Services use four numbered, ruled rows with a title, factual description, and concise scope metadata.
 - The hero uses a labelled, original vector illustration to show a request becoming organized information and an action. It is conceptual, not an interface or a claim about either product.
-- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; ICT Zella follows as the secondary case. Original editorial posters reserve proportional space for authorized screenshots without fabricating interfaces or results.
+- Portfolio hierarchy is Ventora first as “CASO PRINCIPAL”; Software de Trading ICT follows as the secondary case. Ventora shows its public website and commercial dashboard; the trading case shows a cropped dashboard. The dashboard data is fictional and labeled as demonstration data.
 - The conceptual illustration runs an eight-second loop with a pause control. The heading and scroll reveals remain visible by default; reduced motion or data saving shows a static illustration. Optional same-origin video is loaded only when configured and visible; see `docs/DEMO_VISUAL.md`.
 
 ### Forms
@@ -115,7 +115,7 @@ Geometry is mostly square-cornered. Primary buttons use a 2px radius; form contr
 
 - Do use the exact approved palette and Instrument Serif / Manrope roles above.
 - Do keep Alessandro Arenas as the primary identity and AA as a supporting mark.
-- Do retain Ventora as the lead case and ICT Zella as secondary.
+- Do retain Ventora as the lead case and Software de Trading ICT as secondary.
 - Do preserve the responsive layouts, skip link, focus visibility, accessible mobile-navigation state, native form validation, consent, privacy link, and WhatsApp handoff behavior.
 - Do respect `prefers-reduced-motion`; transitions and smooth scrolling are reduced by the stylesheet.
 - Don't invent customer claims, testimonials, metrics, screenshots, or credentials.

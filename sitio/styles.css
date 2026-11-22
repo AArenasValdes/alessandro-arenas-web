@@ -459,6 +459,9 @@ h1 em, h2 em, .hero-note em, .case-secondary h3 em { color: var(--sage); font-we
 .project-visual { display: block; aspect-ratio: auto; margin: 0; padding: 0; background: transparent; color: var(--forest); }
 .project-visual::before, .project-visual::after { content: none; }
 .project-visual img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.visual-ventora img { aspect-ratio: 1400 / 670; }
+.visual-ventora-panel { margin-top: 24px; }
+.visual-ventora-panel img { aspect-ratio: 1024 / 492; }
 .visual-zella img { aspect-ratio: 2 / 1; }
 .project-visual figcaption { padding-top: 8px; color: var(--forest); font-size: 11px; line-height: 1.4; }
 @media (hover: hover) and (pointer: fine) {
