@@ -8,7 +8,7 @@ Repositorio para trabajo con Codex, Claude Code y Antigravity. Sin backend, sin 
 - `guias/`: estrategia de marketing e identidad.
 - `docs/BRIEF_DISENO.md`: diseño, conversión y objetivos.
 - `docs/PUBLICACION_CLOUDFLARE.md`: cómo desplegar por $0 en hosting.
-- `docs/DEMO_VISUAL.md`: cómo incorporar una grabación y poster autorizados al hero.
+- `docs/DEMO_VISUAL.md`: recursos del hero y procedencia de las capturas.
 - `docs/PROMPT_PARA_CODEX.md`: encargo listo para el agente.
 - `AGENTS.md`: reglas compartidas para Codex y Antigravity.
 - `CLAUDE.md`: adaptador para Claude Code.
@@ -26,4 +26,4 @@ Abrir `http://localhost:8000`.
 No publiques antes de configurar el número comercial real en `sitio/config.js`, revisar política de privacidad, probar WhatsApp desde un celular y definir la URL definitiva para canonical y Open Graph. `config.js` es archivo público, nunca pegar llaves API o secretos.
 
 ## Identidad visual
-La rama `design/atelier-nocturno` contiene una propuesta editorial con Instrument Serif y Manrope locales, paleta carbón/marfil/salvia y Ventora como caso principal. Las decisiones de identidad están en `DESIGN.md`; los hallazgos y capturas de revisión se guardan localmente bajo `.impeccable/review/`.
+Digital Black Edition usa Manrope e Instrument Serif locales. Las decisiones están en `DESIGN.md` y las capturas de revisión en `docs/revision-black/`.
