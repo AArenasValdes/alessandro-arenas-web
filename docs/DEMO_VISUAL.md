@@ -1,14 +1,7 @@
-# Demostración del hero
+# Material visual de Digital Black Edition
 
-Mientras no exista una grabación auténtica y autorizada, el hero muestra una ilustración vectorial conceptual. Su animación puede pausarse y también funciona como imagen estática sin JavaScript, con movimiento reducido o con ahorro de datos. `sitio/assets/hero-concept-poster.svg` es una versión estática optimizada de esa ilustración; no es una captura de ningún producto.
+La portada usa una escultura conceptual original creada para la marca. El archivo local `sitio/assets/escultura.webp` mide 1050 × 788 px. Una entrada CSS de 4,8 segundos desplaza el encuadre y después se detiene. La escultura es decorativa y tiene alternativa vacía. El mensaje y los enlaces son HTML y funcionan desde el primer render.
 
-## Incorporar un video real
+La curva de impacto es ilustrativa. No tiene escala ni porcentajes. La esfera pulsa dos veces. Ambas animaciones respetan la preferencia de movimiento reducido.
 
-1. Preparar una grabación autorizada de 6–10 segundos, sin sonido ni datos privados, en MP4 H.264. Añadir WebM solo si es realmente más liviano y conserva calidad comparable.
-2. Crear una imagen poster optimizada y representativa de la grabación, sin datos privados, preferentemente con proporción 720:520. Guardar los archivos dentro de `sitio/assets/`.
-3. En la etiqueta `<figure class="hero-art visual-demo">` de `sitio/index.html`, completar `data-video-mp4` y `data-video-poster` con las rutas relativas reales. Completar `data-video-webm` solo si existe esa versión, y `data-video-label` con una descripción veraz y breve.
-4. Comprobar reproducción, pausa y reanudación con teclado, móvil y escritorio. Verificar que el poster aparezca con movimiento reducido y ahorro de datos, que no se solicite el video antes de entrar en pantalla y que el contenido conceptual reaparezca si el archivo falla.
-
-El video se crea únicamente cuando hay MP4 y poster configurados y el área entra en pantalla. Se reproduce sin sonido, en bucle y en línea cuando el navegador lo permite; si bloquea la reproducción automática, el poster ofrece un botón para iniciarla. Con movimiento reducido, `saveData` o conexión móvil `slow-2g`, `2g` o `3g`, se muestra el poster y no se solicita el video. La detección de ahorro de datos y tipo de conexión depende de que el navegador proporcione esa información. Las rutas de medios deben pertenecer al mismo origen del sitio.
-
-Ventora muestra una captura de su sitio público suministrada por el propietario (`sitio/assets/ventora-sitio.webp`, 1400 × 670 px) y una imagen del panel comercial procedente del sitio público de Ventora (`sitio/assets/ventora-panel.webp`, 1024 × 492 px). El propietario confirmó que los nombres y montos del panel son ficticios y autorizó su uso. El software de trading ICT muestra un recorte del panel suministrado por el propietario (`sitio/assets/trading-ict-panel.webp`, 1600 × 800 px); sus cifras también son ficticias y autorizadas. Los pies de imagen identifican los datos de demostración. Las imágenes tienen carga diferida, dimensiones declaradas y texto alternativo. Las capturas originales en `imagenes/` permanecen fuera del directorio publicado y pueden contener datos de cuenta; no deben incluirse en el repositorio público.
+Ventora muestra su panel comercial autorizado (1024 × 492 px) y enlaza a la captura de su página pública (1400 × 670 px). El caso Software de Trading ICT usa un recorte autorizado del diario de operaciones (1600 × 800 px) que excluye el correo de cuenta. Los paneles indican que los datos son ficticios, incluyen texto alternativo y se pueden abrir a su tamaño original. Los originales suministrados permanecen fuera de `sitio/`.

@@ -1,4 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="78" viewBox="0 0 300 78" role="img" aria-label="Alessandro Arenas">
-  <path d="M5 61 21 7 37 61M12 40h18M36 61 52 7 68 61M43 40h18" transform="translate(3 4)" fill="none" stroke="#92A796" stroke-width="3" stroke-linecap="square" stroke-linejoin="miter" />
+  <g transform="translate(10 9) scale(1.28)">
+  <path d="M2 39 21 5l7-2-17 32z" fill="#ACF0C5"/>
+  <path d="m28 3 18 33-9 3-14-26z" fill="#F3F4F0"/>
+  <path d="m16 31 14-9 3 6-19 8z" fill="#67D49D"/>
+</g>
   <text x="85" y="47" fill="#F3F0E9" font-family="Georgia,serif" font-size="24">Alessandro Arenas</text>
 </svg>
